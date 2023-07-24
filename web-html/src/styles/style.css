@@ -1,0 +1,106 @@
+:root{
+    --primary: #212429;
+    --secondary: #ffffff;
+    --accent: red;
+    width: 920px;
+}
+
+.barra-menu {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    color: var(--primary);
+    border-block-end: 1px solid black;
+    justify-content: space-between;
+    
+}
+
+.texto-menu {
+    display: flex;
+    align-items: center;
+    
+}
+
+.texto-cabecera{
+    display: flex;
+    padding-inline-start: 70px;
+}
+
+.imagenes-menu{
+   display: flex;
+    justify-content: space-around;
+
+}
+
+.icon-menu{
+    width: 32px;
+    margin: 30px;
+}
+
+
+
+
+
+
+
+
+body {
+    
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+h1{
+    color: red;
+}
+
+.title {
+    color: blueviolet;
+    
+}
+ button {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    
+}
+button:hover {
+    background-color: var(--accent);
+
+}
+
+
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+
+.element {
+    flex: 1;
+    padding: 20px;
+    height: 100px;
+    background-color: #854ec2;
+}
+
+.prueba1:hover {
+    animation-name: tienda ;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+
+@keyframes tienda {
+    from {
+        width: 200px;
+    }
+    to{
+        width: 400px;
+    }
+}
+
