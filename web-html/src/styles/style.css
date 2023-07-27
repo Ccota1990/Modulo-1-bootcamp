@@ -14,6 +14,7 @@ body {
 
 .barra-menu {
     position: fixed;
+    top: 0%;
     width: 100%;
     height: 75px;
     display: flex;
@@ -22,6 +23,9 @@ body {
     justify-content: space-between;
     max-width: 1280px;
     font-size: 16px;
+    z-index: 2;
+    background-color: var(--secondary);
+    
 }
 
 .imagenes-acordeon{
@@ -41,7 +45,7 @@ body {
 }
 
 .imagenes-menu{
-   display: flex;
+    display: flex;
     justify-content: space-around;
     width: 20%;  
 }
@@ -49,18 +53,39 @@ body {
 .icon-menu{
     width: 25px;
 }
+.titulo{
+    position: relative;
+    top:100px;
+    margin: 20px;
+}
+.catalogo {
+    position: relative;
+    top:120px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; 
+    justify-items: center; 
+}
 
-@media (max-width: 920px) {
-    .texto-menu{
-        display: none;
+.fotos-catalogo{
+    border-radius: 12px;  
+}
 
-    }
-    .imagenes-menu{
-        display: none;
-    }
-    .barra-menu{
-        justify-content: center;
-    }    
+.texto-tarjetas{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.fotos-footer{
+    background-color: var(--secondary);
+    border-radius: 100px;
+    border-bottom-style: solid; 
+}
+
+.footer-section{
+    display: flex;
 }
 
 h1{
@@ -68,30 +93,50 @@ h1{
     color: var(--primary);
 }
 
-.titulo{
-    position: relative;
-    top:100px;
-    margin: 20px;
-}
-
-.catalogo {
-    position: relative;
-    top:120px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;   
-}
-
-.fotos-catalogo{
-    border-radius: 12px;
-}
-
-
 footer{
     font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 150px;
+    background-color: var(--primary);
+    color: var(--secondary);
+    
+}
+
+
+@media  (max-width: 920px) {
+    .texto-menu{
+        display: none;
+    }
+    .imagenes-menu{
+        display: none;
+    }
+    .barra-menu{
+        justify-content: center;
+    }  
+    .catalogo{
+       display: grid;
+       grid-template-columns: 1fr;
+       justify-items: center   
+    }  
+    .footer-section{
+        border-bottom: #ffffff 1px solid;
+        display: flex;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: normal;
+        padding: 20px;
+      
+    }
 
 }
+
+
+
+
+
 
  button {
     background-color: var(--primary);
