@@ -69,23 +69,39 @@ body {
 }
 
 .fotos-catalogo{
-    border-radius: 12px;  
+    border-radius: 12px;
+}
+.fotos-catalogo:active{
+    animation-name: tienda;
+    animation-duration: 1s;
+    animation-timing-function: linear;  
 }
 
 .texto-tarjetas{
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-around;   
 }
 
 .fotos-footer{
-    background-color: var(--secondary);
-    border-radius: 100px;
-    border-bottom-style: solid; 
+    padding: 16px;
+    display: inline;
 }
 
 .footer-section{
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagenes-footer{
+    background-color: var(--secondary);
+    border-radius: 100%; 
+}
+
+.texto-footer{
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
 h1{
@@ -98,6 +114,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 150px;
+    padding: 32px;
     background-color: var(--primary);
     color: var(--secondary);
     
@@ -122,60 +139,32 @@ footer{
     .footer-section{
         border-bottom: #ffffff 1px solid;
         display: flex;
+        justify-content: flex-start;
+        padding: 16px;
     }
     footer{
         display: grid;
         grid-template-columns: 1fr;
         justify-items: normal;
         padding: 20px;
-      
+        font-weight: bold;
     }
 
-}
-
-
-
-
-
-
- button {
-    background-color: var(--primary);
-    color: var(--secondary);
-    border-radius: 8px;
-    border: none;
-    padding: 10px;
-    
-}
-button:hover {
-    background-color: var(--accent);
-
-}
-
-.container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;   
-}
-
-.element {
-    flex: 1;
-    padding: 20px;
-    height: 100px;
-    background-color: #854ec2;
-}
-
-.prueba1:hover {
-    animation-name: tienda ;
-    animation-duration: 4s;
-    animation-timing-function: linear;
 }
 
 @keyframes tienda {
-    from {
-        width: 200px;
+    0%{
+        width: 100%;
+        height: 100%;
     }
-    to{
-        width: 400px;
+    50%{
+        width: 105%;
+        height: 105%;
+    }
+    100%{
+        width: 108%;
+        height: 108%;
     }
 }
+
 
